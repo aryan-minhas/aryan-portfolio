@@ -1,16 +1,11 @@
+import HeroSection from '@/components/home/HeroSection';
 import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
 
 export default function HomePage() {
   return (
     <>
       {/* ── § 1: Hero ────────────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="hero"
-        label="HERO SECTION"
-        sublabel="Boot sequence → ARYAN ALI KHAN → 3D particle field"
-        height="100vh"
-        accent="cyan"
-      />
+      <HeroSection />
 
       {/* ── § 2: Stats Bar ───────────────────────────────────────────────────── */}
       <SectionPlaceholder

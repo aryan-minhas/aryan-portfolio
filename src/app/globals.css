@@ -33,6 +33,7 @@
   /* ── Animations ── */
   --animate-marquee:    marquee 25s linear infinite;
   --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
+  --animate-blink:      blink 1s step-end infinite;
 }
 
 /* ── Keyframes ─────────────────────────────────────────────────────────── */
@@ -44,6 +45,11 @@
 @keyframes glowPulse {
   0%, 100% { opacity: 0.6; }
   50%      { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
