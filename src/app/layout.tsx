@@ -35,31 +35,42 @@ const interTight = Inter_Tight({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aryanminhas.dev';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Aryan Ali Khan",
-    template: "%s | Aryan Ali Khan",
+    default:  'Aryan Ali Khan',
+    template: '%s | Aryan Ali Khan',
   },
   description:
-    "Software Engineer & Systems Architect. CS student at FAST-NUCES building AI-augmented systems, concurrent engines, and elite-grade software.",
+    'Software Engineer & Systems Architect. CS student at FAST-NUCES building AI-augmented systems, concurrent engines, and elite-grade software.',
   keywords: [
-    "software engineer",
-    "computer science",
-    "FAST-NUCES",
-    "systems engineer",
-    "AI developer",
-    "Pakistan",
+    'software engineer', 'computer science', 'FAST-NUCES',
+    'systems engineer', 'AI developer', 'Pakistan',
+    'portfolio', 'Aryan Ali Khan',
   ],
+  authors:  [{ name: 'Aryan Ali Khan', url: SITE_URL }],
+  creator:  'Aryan Ali Khan',
+  robots: {
+    index:  true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  },
   openGraph: {
-    title: "Aryan Ali Khan — Systems Engineer",
-    description: "Elite engineering portfolio.",
-    url: "https://aryan.dev",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-    type: "website",
+    title:       'Aryan Ali Khan — Systems Engineer',
+    description: 'Eight major engineering projects. Systems programming, AI/ML, game engines, and web platforms.',
+    url:         SITE_URL,
+    siteName:    'Aryan Ali Khan',
+    locale:      'en_US',
+    type:        'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Aryan Ali Khan Portfolio' }],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Aryan Ali Khan",
+    card:    'summary_large_image',
+    title:   'Aryan Ali Khan — Systems Engineer',
+    description: 'Eight major engineering projects across systems, AI/ML, games and web.',
+    images:  ['/og-image.png'],
   },
 };
 

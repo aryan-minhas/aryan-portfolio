@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CIPHER — Aryan Ali Khan Portfolio
+
+Personal portfolio for Aryan Ali Khan — Systems Engineer & AI Architect, CS student at FAST-NUCES.
+
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16.2.6 (App Router) |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS v4 (theme tokens in `globals.css`) |
+| Animation | GSAP 3.12 + ScrollTrigger + SplitText, Framer Motion |
+| 3D | Three.js + React Three Fiber |
+| Scroll | Lenis smooth scroll |
+| Fonts | Bebas Neue · Syne · DM Mono · Inter Tight |
+
+## Project Structure
+
+```
+src/
+  app/                  # Next.js App Router pages
+    projects/[slug]/    # 8 SSG project detail pages
+    sitemap.ts          # Auto-generated sitemap
+    robots.ts           # robots.txt
+  components/
+    home/               # HeroSection, FeaturedProjects, StatsBar, TechStack, CTA
+    about/              # AboutHero, SkillsMatrix, CourseworkTimeline
+    experience/         # AVALStartupSection, LeadershipHero
+    projects/           # ProjectCard, ProjectGrid
+    contact/            # ContactForm, ContactInfo
+    layout/             # Navbar, Footer, SmoothScrollProvider, PageWrapper
+    ui/                 # CustomCursor, MagneticButton, RevealText, ScrollReveal
+  lib/
+    data/               # projects.ts, skills.ts, personal.ts, index.ts
+    animations/         # gsap-config.ts
+    hooks/              # useScrollReveal, useScrollProgress
+    store.ts            # Zustand store (cursor variant, loading state)
+  types/                # TypeScript interfaces
+docs/
+  implementation_plan.md
+  project_details.md
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file:
 
-## Learn More
+```env
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build   # production build
+npm run start   # serve production build locally
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+Deploy to Vercel:
+1. Push to GitHub
+2. Import the repository at [vercel.com/new](https://vercel.com/new)
+3. Set `NEXT_PUBLIC_SITE_URL` in Project Settings → Environment Variables
+4. Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## OG Image
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Place a `1200×630` image at `public/og-image.png` before deploying for social previews.
