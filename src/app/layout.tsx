@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 import Navbar from "@/components/layout/Navbar";
 import PageWrapper from "@/components/layout/PageWrapper";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -76,6 +77,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <SmoothScrollProvider>
+          <CustomCursor />
           <Navbar />
           <PageWrapper>
             <main id="main-content">{children}</main>
