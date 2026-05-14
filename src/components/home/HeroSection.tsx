@@ -2,12 +2,15 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 import { useAppStore } from '@/lib/store';
 import { initGSAP } from '@/lib/animations/gsap-config';
+
+const HeroScene = dynamic(() => import('./HeroScene'), { ssr: false });
 
 gsap.registerPlugin(SplitText, TextPlugin);
 
@@ -128,15 +131,20 @@ export default function HeroSection() {
       className="relative flex flex-col justify-center items-center min-h-svh overflow-hidden bg-void"
       aria-label="Hero — Aryan Ali Khan"
     >
-      {/* ── Radial ambient glow (3D canvas placeholder, Session 7) ────────── */}
+      {/* ── Ambient glow beneath canvas ─────────────────────────────────────── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,229,255,0.05) 0%, transparent 70%)',
+            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,229,255,0.04) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
+
+      {/* ── Three.js HeroScene ───────────────────────────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <HeroScene />
+      </div>
 
       {/* ── Phase 1–3: Boot Overlay ─────────────────────────────────────────── */}
       <div
