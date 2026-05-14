@@ -1,58 +1,65 @@
 import type { Metadata } from 'next';
-import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
+import AboutHero          from '@/components/about/AboutHero';
+import CourseworkTimeline from '@/components/about/CourseworkTimeline';
+import SkillsMatrix       from '@/components/about/SkillsMatrix';
 
 export const metadata: Metadata = {
   title: 'About',
   description: 'Second-year CS student at FAST-NUCES. Co-Founder of AVAL R&D. Systems engineer obsessed with low-level architecture and AI-augmented tooling.',
 };
 
+const PHILOSOPHY = [
+  {
+    label: 'ENGINEERING',
+    body:  'Correctness first, performance second, elegance third. A system that crashes elegantly is still broken.',
+  },
+  {
+    label: 'AESTHETIC',
+    body:  'True Detective. Chernobyl. The Lincoln Lawyer. Compressed tension, clinical precision, no wasted frame.',
+  },
+  {
+    label: 'APPROACH',
+    body:  'Read the spec. Understand the machine. Ship something that works at 3am on a server you\'ve never touched.',
+  },
+] as const;
+
 export default function AboutPage() {
   return (
     <>
-      {/* ── § 1: Page Hero ───────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="about-hero"
-        label="ABOUT"
-        sublabel="Aryan Ali Khan — a manifesto in two sentences"
-        height="60vh"
-        accent="cyan"
-      />
+      {/* ── § 1 & 2: Hero + Bio ──────────────────────────────────────────────── */}
+      <AboutHero />
 
-      {/* ── § 2: Bio ─────────────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="bio"
-        label="BIO"
-        sublabel="Split layout: large cinematic text left — abstract art / photo right"
-        height="70vh"
-        accent="violet"
-      />
-
-      {/* ── § 3: Education ───────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="education"
-        label="EDUCATION"
-        sublabel="FAST-NUCES · BS CS · 2024–2028 · CGPA 3.03 — coursework grid"
-        height="60vh"
-        accent="cyan"
-      />
+      {/* ── § 3: Education + Coursework ──────────────────────────────────────── */}
+      <CourseworkTimeline />
 
       {/* ── § 4: Skills Matrix ───────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="skills"
-        label="SKILLS MATRIX"
-        sublabel="Languages + tools with animated proficiency bars on scroll"
-        height="70vh"
-        accent="amber"
-      />
+      <SkillsMatrix />
 
       {/* ── § 5: Philosophy ──────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="philosophy"
-        label="PHILOSOPHY"
-        sublabel="Interests · aesthetic · approach to engineering"
-        height="50vh"
-        accent="violet"
-      />
+      <section
+        className="py-20 border-t border-[var(--color-border)]"
+        style={{ paddingInline: 'var(--section-pad-x)' }}
+      >
+        <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-12">
+          PHILOSOPHY
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {PHILOSOPHY.map(({ label, body }) => (
+            <div
+              key={label}
+              className="p-6"
+              style={{ background: 'var(--glass-bg)', border: '1px solid var(--color-border)', borderTop: '2px solid var(--color-violet)' }}
+            >
+              <p className="font-mono text-[10px] text-violet tracking-[0.3em] uppercase mb-4">
+                {label}
+              </p>
+              <p className="font-body text-sm text-ink-muted leading-relaxed">
+                {body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 }

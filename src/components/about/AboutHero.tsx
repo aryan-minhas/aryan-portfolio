@@ -1,3 +1,79 @@
+import { personal, education } from '@/lib/data';
+
+const GLANCE = [
+  { label: 'STATUS',   value: `${education.currentYear}` },
+  { label: 'SCHOOL',   value: 'FAST-NUCES, Islamabad'     },
+  { label: 'DEGREE',   value: 'BS Computer Science'       },
+  { label: 'CGPA',     value: `${education.cgpa} / 4.00`  },
+  { label: 'VENTURE',  value: 'Co-Founder, AVAL R&D'      },
+  { label: 'LOCATION', value: personal.location           },
+] as const;
+
 export default function AboutHero() {
-  return null;
+  const [first, ...rest] = personal.name.split(' ');
+
+  return (
+    <>
+      {/* ── § 1: Hero ─────────────────────────────────────────────────── */}
+      <section
+        className="flex flex-col justify-end pb-20 pt-40 border-b border-[var(--color-border)]"
+        style={{ paddingInline: 'var(--section-pad-x)', minHeight: '60vh' }}
+      >
+        <p className="font-mono text-xs text-cyan tracking-[0.3em] uppercase mb-6">
+          WHO I AM
+        </p>
+        <h1
+          className="font-display leading-none tracking-widest text-ink mb-6"
+          style={{ fontSize: 'clamp(4rem, 12vw, 11rem)' }}
+        >
+          {first.toUpperCase()}
+          <br />
+          <span style={{ color: 'var(--color-cyan)', textShadow: 'var(--glow-cyan)' }}>
+            {rest.join(' ').toUpperCase()}
+          </span>
+        </h1>
+        <p className="font-heading text-lg font-medium text-ink-muted">
+          {personal.title}
+        </p>
+      </section>
+
+      {/* ── § 2: Bio + At-a-Glance ──────────────────────────────────────── */}
+      <section
+        className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-20 border-b border-[var(--color-border)]"
+        style={{ paddingInline: 'var(--section-pad-x)' }}
+      >
+        <div>
+          <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-8">
+            BACKGROUND
+          </p>
+          <p
+            className="font-heading font-medium text-ink leading-relaxed"
+            style={{ fontSize: 'clamp(1.05rem, 2vw, 1.3rem)' }}
+          >
+            {personal.bio}
+          </p>
+        </div>
+        <div>
+          <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-6">
+            AT A GLANCE
+          </p>
+          <dl className="space-y-0">
+            {GLANCE.map(({ label, value }) => (
+              <div
+                key={label}
+                className="flex items-baseline gap-4 py-4 border-b border-[var(--color-border)]"
+              >
+                <dt className="font-mono text-[10px] text-ink-faint tracking-[0.3em] w-24 shrink-0">
+                  {label}
+                </dt>
+                <dd className="font-body text-sm text-ink-muted">
+                  {value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+    </>
+  );
 }

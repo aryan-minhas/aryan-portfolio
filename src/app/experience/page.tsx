@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
-import RevealText from '@/components/ui/RevealText';
+import RevealText          from '@/components/ui/RevealText';
+import AVALStartupSection  from '@/components/experience/AVALStartupSection';
+import LeadershipHero      from '@/components/experience/LeadershipHero';
 
 export const metadata: Metadata = {
   title: 'Experience',
@@ -29,31 +30,10 @@ export default function ExperiencePage() {
       </section>
 
       {/* ── § 2: AVAL R&D ────────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="aval"
-        label="AVAL R&D"
-        sublabel="Co-Founder · 2024–Present · AI-powered financial reconciliation engine"
-        height="60vh"
-        accent="cyan"
-      />
+      <AVALStartupSection />
 
-      {/* ── § 3: Academic Timeline ───────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="timeline"
-        label="ACADEMIC TIMELINE"
-        sublabel="Semester-by-semester progression — SVG line draw on scroll"
-        height="80vh"
-        accent="amber"
-      />
-
-      {/* ── § 4: Leadership ──────────────────────────────────────────────────── */}
-      <SectionPlaceholder
-        id="leadership"
-        label="LEADERSHIP"
-        sublabel="Highlights and positions of responsibility"
-        height="50vh"
-        accent="violet"
-      />
+      {/* ── § 3 & 4: Academic Timeline + Leadership ─────────────────────────── */}
+      <LeadershipHero />
     </>
   );
 }
