@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
-import RevealText from '@/components/ui/RevealText';
+import RevealText   from '@/components/ui/RevealText';
+import ContactForm  from '@/components/contact/ContactForm';
+import ContactInfo  from '@/components/contact/ContactInfo';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -25,45 +26,12 @@ export default function ContactPage() {
 
       {/* ── § 2: Form + Info ─────────────────────────────────────────────────── */}
       <section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-24"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-24"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
-        <SectionPlaceholder
-          id="contact-form"
-          label="CONTACT FORM"
-          sublabel="Name · Email · Message — stagger reveal on scroll"
-          height="480px"
-          accent="cyan"
-        />
-        <SectionPlaceholder
-          id="contact-info"
-          label="CONTACT INFO"
-          sublabel="Email · GitHub · LinkedIn — magnetic icon buttons"
-          height="480px"
-          accent="violet"
-        />
+        <ContactForm />
+        <ContactInfo />
       </section>
-
-      {/* ── § 3: Footer ──────────────────────────────────────────────────────── */}
-      <footer
-        className="border-t border-[var(--color-border)] py-8 flex items-center justify-between"
-        style={{ paddingInline: 'var(--section-pad-x)' }}
-      >
-        <p className="font-mono text-xs text-ink-muted tracking-widest">
-          © 2024 ARYAN ALI KHAN
-        </p>
-        <div className="flex gap-6">
-          {['GITHUB', 'LINKEDIN', 'EMAIL'].map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="font-mono text-xs text-ink-muted hover:text-cyan transition-colors tracking-widest"
-            >
-              {link}
-            </a>
-          ))}
-        </div>
-      </footer>
     </>
   );
 }

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Syne, DM_Mono, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
-import Navbar from "@/components/layout/Navbar";
+import Navbar      from "@/components/layout/Navbar";
 import PageWrapper from "@/components/layout/PageWrapper";
+import Footer      from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 
 const bebas = Bebas_Neue({
@@ -81,6 +82,7 @@ export default function RootLayout({
           <Navbar />
           <PageWrapper>
             <main id="main-content">{children}</main>
+            <Footer />
           </PageWrapper>
         </SmoothScrollProvider>
       </body>
