@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Syne, DM_Mono, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
+import Navbar from "@/components/layout/Navbar";
+import PageWrapper from "@/components/layout/PageWrapper";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -72,7 +75,12 @@ export default function RootLayout({
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>
-        <main id="main-content">{children}</main>
+        <SmoothScrollProvider>
+          <Navbar />
+          <PageWrapper>
+            <main id="main-content">{children}</main>
+          </PageWrapper>
+        </SmoothScrollProvider>
       </body>
     </html>
   );
