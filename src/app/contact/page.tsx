@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
+import RevealText from '@/components/ui/RevealText';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -14,12 +15,12 @@ export default function ContactPage() {
         className="flex items-end pb-12 pt-40"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
-        <h1 className="font-display text-[clamp(4rem,14vw,13rem)] leading-none tracking-widest text-ink">
-          SAY{' '}
-          <span className="text-cyan" style={{ textShadow: 'var(--glow-cyan)' }}>
-            HELLO
-          </span>
-        </h1>
+        <RevealText
+          as="h1"
+          className="font-display text-[clamp(4rem,14vw,13rem)] leading-none tracking-widest text-ink"
+        >
+          SAY HELLO
+        </RevealText>
       </section>
 
       {/* ── § 2: Form + Info ─────────────────────────────────────────────────── */}

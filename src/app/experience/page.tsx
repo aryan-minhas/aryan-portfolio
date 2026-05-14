@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
+import RevealText from '@/components/ui/RevealText';
 
 export const metadata: Metadata = {
   title: 'Experience',
@@ -18,12 +19,12 @@ export default function ExperiencePage() {
           <p className="font-mono text-xs text-cyan tracking-[0.3em] uppercase mb-4">
             EXPERIENCE
           </p>
-          <h1 className="font-display text-[clamp(4rem,12vw,11rem)] leading-none tracking-widest text-ink">
-            THE{' '}
-            <span className="text-cyan" style={{ textShadow: 'var(--glow-cyan)' }}>
-              RECORD
-            </span>
-          </h1>
+          <RevealText
+            as="h1"
+            className="font-display text-[clamp(4rem,12vw,11rem)] leading-none tracking-widest text-ink"
+          >
+            THE RECORD
+          </RevealText>
         </div>
       </section>
 

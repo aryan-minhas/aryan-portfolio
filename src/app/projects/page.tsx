@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import SectionPlaceholder from '@/components/ui/SectionPlaceholder';
+import RevealText from '@/components/ui/RevealText';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -16,18 +18,20 @@ export default function ProjectsPage() {
         className="flex items-end pb-16 pt-40"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
-        <h1 className="font-display text-[clamp(5rem,15vw,14rem)] leading-none tracking-widest text-ink">
-          THE{' '}
-          <span className="text-cyan" style={{ textShadow: 'var(--glow-cyan)' }}>
-            WORK
-          </span>
-        </h1>
+        <RevealText
+          as="h1"
+          className="font-display text-[clamp(5rem,15vw,14rem)] leading-none tracking-widest text-ink"
+        >
+          THE WORK
+        </RevealText>
       </section>
 
       {/* ── § 2: Filter Bar ──────────────────────────────────────────────────── */}
-      <section
+      <ScrollReveal
+        as="section"
+        variant="slide-up"
+        staggerChildren
         className="flex items-center gap-2 pb-12 flex-wrap"
-        style={{ paddingInline: 'var(--section-pad-x)' }}
         aria-label="Project category filter"
       >
         {FILTER_TABS.map((tab) => (
@@ -35,11 +39,12 @@ export default function ProjectsPage() {
             key={tab}
             className="font-mono text-xs tracking-[0.2em] px-5 py-2 border border-[var(--color-border)] text-ink-muted hover:text-cyan hover:border-cyan/40 transition-colors duration-300"
             aria-label={`Filter by ${tab}`}
+            style={{ paddingInline: 'var(--section-pad-x)' }}
           >
             {tab}
           </button>
         ))}
-      </section>
+      </ScrollReveal>
 
       {/* ── § 3: Project Grid ────────────────────────────────────────────────── */}
       <SectionPlaceholder
