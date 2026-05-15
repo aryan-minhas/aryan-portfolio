@@ -2,6 +2,7 @@
 
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import { AdaptiveDpr, AdaptiveEvents } from '@react-three/drei';
 import * as THREE from 'three';
 
 const BRASS = '#c2a649';
@@ -95,10 +96,13 @@ export default function HeroScene() {
   return (
     <Canvas
       camera={{ position: [0, 0, 6.5], fov: 55 }}
-      dpr={[1, 2]}
-      gl={{ antialias: false, alpha: true }}
+      dpr={[1, 1.5]}
+      performance={{ min: 0.5 }}
+      gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
       style={{ background: 'transparent' }}
     >
+      <AdaptiveDpr pixelated />
+      <AdaptiveEvents />
       <ambientLight intensity={0.5} color={BRASS} />
       <pointLight position={[10, 10, 10]} intensity={3.0} color={BRASS} />
       <pointLight position={[-10, -10, -5]} intensity={1.2} color="#5a6b70" />

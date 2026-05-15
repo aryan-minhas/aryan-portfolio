@@ -10,6 +10,7 @@ export function initGSAP() {
   if (initialized) return;
   initialized = true;
 
+  gsap.config({ force3D: true });
   gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase, TextPlugin);
 
   CustomEase.create('cinematic', 'M0,0 C0.16,0 0.3,1 1,1');

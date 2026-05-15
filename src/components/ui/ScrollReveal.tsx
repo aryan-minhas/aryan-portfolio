@@ -64,8 +64,6 @@ export default function ScrollReveal({
       'count-up':   { opacity: 1 },
     };
 
-    gsap.set(targets, fromMap[variant]);
-
     const tweenVars: gsap.TweenVars = {
       ...toMap[variant],
       delay,
@@ -74,17 +72,17 @@ export default function ScrollReveal({
       ...(staggerChildren && { stagger }),
     };
 
-    const trigger = ScrollTrigger.create({
-      trigger: el,
-      start,
-      once,
-      onEnter: () => gsap.to(targets, tweenVars),
-    });
+    const ctx = gsap.context(() => {
+      gsap.set(targets, fromMap[variant]);
+      ScrollTrigger.create({
+        trigger: el,
+        start,
+        once,
+        onEnter: () => gsap.to(targets, tweenVars),
+      });
+    }, el);
 
-    return () => {
-      trigger.kill();
-      gsap.set(targets, { clearProps: 'all' });
-    };
+    return () => ctx.revert();
   }, [variant, delay, duration, stagger, start, once, staggerChildren]);
 
   return React.createElement(
