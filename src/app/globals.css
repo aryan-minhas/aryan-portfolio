@@ -6,23 +6,29 @@
    These variables are also emitted as CSS custom properties on :root.
 ═══════════════════════════════════════════════════════════════════════════ */
 @theme {
-  /* ── Color Palette ── */
-  --color-void:        #050507;
-  --color-depth-1:     #0a0a0f;
-  --color-depth-2:     #0f0f1a;
-  --color-depth-3:     #161625;
+  /* ── Color Palette (True Detective - No Red) ── */
+  --color-void:        #0c0d0b; /* Asphalt Black */
+  --color-depth-1:     #121310;
+  --color-depth-2:     #181a16;
+  --color-depth-3:     #1f211c;
 
-  --color-cyan:        #00e5ff;
-  --color-cyan-dim:    #00e5ff26;
-  --color-cyan-glow:   #00e5ff40;
-  --color-amber:       #ff6b35;
-  --color-amber-dim:   #ff6b3520;
-  --color-violet:      #7c3aed;
-  --color-violet-dim:  #7c3aed20;
+  /* Primary Accent: Tarnished Brass */
+  --color-cyan:        #c2a649;
+  --color-cyan-dim:    #c2a64920;
+  --color-cyan-glow:   #c2a64915;
+  
+  /* Secondary Accent: Tarnished Steel (Replaces the Red) */
+  --color-amber:       #5a6b70;
+  --color-amber-dim:   #5a6b7020;
+  
+  /* Tertiary Accent: Muted Moss */
+  --color-violet:      #4a5d4e;
+  --color-violet-dim:  #4a5d4e20;
 
-  --color-ink:         #e8e8f0;
-  --color-ink-muted:   #6b7280;
-  --color-ink-faint:   #374151;
+  /* Typography: Bone and Ash */
+  --color-ink:         #e3e1d9;
+  --color-ink-muted:   #737670;
+  --color-ink-faint:   #3f423c;
 
   /* ── Typography ── */
   --font-display: var(--font-bebas), sans-serif;
@@ -72,18 +78,18 @@
   --duration-cinematic: 1.4s;
 
   /* ── Glass / Blur ── */
-  --glass-bg:           rgba(255, 255, 255, 0.03);
-  --glass-border:       rgba(255, 255, 255, 0.06);
+  --glass-bg:           rgba(227, 225, 217, 0.02);
+  --glass-border:       rgba(227, 225, 217, 0.05);
   --glass-blur:         blur(12px);
 
   /* ── Borders ── */
-  --color-border:       rgba(0, 229, 255, 0.10);
-  --color-border-hover: rgba(0, 229, 255, 0.30);
+  --color-border:       rgba(194, 166, 73, 0.12);
+  --color-border-hover: rgba(194, 166, 73, 0.30);
 
   /* ── Shadows / Glows ── */
-  --glow-cyan:    0 0 20px rgba(0, 229, 255, 0.3), 0 0 60px rgba(0, 229, 255, 0.1);
-  --glow-amber:   0 0 20px rgba(255, 107, 53, 0.3), 0 0 60px rgba(255, 107, 53, 0.1);
-  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(0, 229, 255, 0.10);
+  --glow-cyan:    0 0 10px rgba(194, 166, 73, 0.15), 0 0 30px rgba(194, 166, 73, 0.05);
+  --glow-amber:   0 0 10px rgba(90, 107, 112, 0.20), 0 0 30px rgba(90, 107, 112, 0.05); /* Steel glow */
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(194, 166, 73, 0.12);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
