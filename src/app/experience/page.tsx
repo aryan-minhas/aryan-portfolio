@@ -13,7 +13,7 @@ export default function ExperiencePage() {
     <>
       {/* ── § 1: Page Hero ───────────────────────────────────────────────────── */}
       <section
-        className="flex items-end pb-16 pt-40 border-b border-[var(--color-border)]"
+        className="flex items-end pt-16 pb-20 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)', minHeight: '50vh' }}
       >
         <div>

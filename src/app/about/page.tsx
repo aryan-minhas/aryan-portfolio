@@ -37,7 +37,7 @@ export default function AboutPage() {
 
       {/* ── § 5: Philosophy ──────────────────────────────────────────────────── */}
       <section
-        className="py-20 border-t border-[var(--color-border)]"
+        className="py-24 md:py-32 border-t border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-12">
@@ -47,7 +47,7 @@ export default function AboutPage() {
           {PHILOSOPHY.map(({ label, body }) => (
             <div
               key={label}
-              className="p-6"
+              className="p-8"
               style={{ background: 'var(--glass-bg)', border: '1px solid var(--color-border)', borderTop: '2px solid var(--color-violet)' }}
             >
               <p className="font-mono text-[10px] text-violet tracking-[0.3em] uppercase mb-4">

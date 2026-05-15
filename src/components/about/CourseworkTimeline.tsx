@@ -14,7 +14,7 @@ export default function CourseworkTimeline() {
 
   return (
     <section
-      className="py-20 border-t border-[var(--color-border)]"
+      className="py-24 md:py-32 border-t border-[var(--color-border)]"
       style={{ paddingInline: 'var(--section-pad-x)' }}
     >
       {/* Education summary card */}

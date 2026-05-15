@@ -128,7 +128,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col justify-center items-center min-h-svh overflow-hidden bg-void"
+      className="relative flex flex-col justify-center items-center min-h-svh overflow-hidden bg-void -mt-28 md:-mt-32"
       aria-label="Hero — Aryan Ali Khan"
     >
       {/* ── Ambient glow beneath canvas ─────────────────────────────────────── */}

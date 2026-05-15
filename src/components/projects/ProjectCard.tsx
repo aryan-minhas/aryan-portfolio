@@ -63,7 +63,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           background:  ACCENT_BG[accent],
           border:      '1px solid var(--color-border)',
           borderTop:   `2px solid ${ACCENT_BORDER[accent]}`,
-          padding:     '1.75rem',
+          padding:     '2rem',
         }}
         aria-label={`View ${project.title}`}
       >

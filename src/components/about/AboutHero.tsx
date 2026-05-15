@@ -16,7 +16,7 @@ export default function AboutHero() {
     <>
       {/* ── § 1: Hero ─────────────────────────────────────────────────── */}
       <section
-        className="flex flex-col justify-end pb-20 pt-40 border-b border-[var(--color-border)]"
+        className="flex flex-col justify-end pt-16 pb-20 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)', minHeight: '60vh' }}
       >
         <p className="font-mono text-xs text-cyan tracking-[0.3em] uppercase mb-6">
@@ -39,7 +39,7 @@ export default function AboutHero() {
 
       {/* ── § 2: Bio + At-a-Glance ──────────────────────────────────────── */}
       <section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-20 border-b border-[var(--color-border)]"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-24 md:py-32 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <div>

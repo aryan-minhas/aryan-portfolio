@@ -49,7 +49,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     <>
       {/* ── § 1: Hero ───────────────────────────────────────────────────────────── */}
       <section
-        className="flex flex-col justify-end pb-16 pt-40 border-b border-[var(--color-border)]"
+        className="flex flex-col justify-end pt-16 pb-20 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)', minHeight: '65vh' }}
       >
         <p className={`font-mono text-xs tracking-[0.3em] uppercase mb-4 ${aText}`}>
@@ -79,7 +79,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* ── § 2: Overview + Highlights ─────────────────────────────────────────── */}
       <section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-20"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-24 md:py-32"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <div>
@@ -111,7 +111,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* ── § 3: Technical Implementation ───────────────────────────────────────── */}
       <section
-        className="py-20 border-t border-[var(--color-border)]"
+        className="py-24 md:py-32 border-t border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-12">
@@ -141,7 +141,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* ── § 4: Full Tech Stack ────────────────────────────────────────────────── */}
       <section
-        className="py-16 border-t border-[var(--color-border)]"
+        className="py-20 md:py-24 border-t border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-8">
@@ -162,7 +162,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* ── § 5: Prev / Next Navigation ─────────────────────────────────────────── */}
       <section
-        className="flex items-start justify-between py-16 border-t border-[var(--color-border)]"
+        className="flex items-start justify-between py-20 md:py-24 border-t border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
         aria-label="Project navigation"
       >

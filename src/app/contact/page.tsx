@@ -13,7 +13,7 @@ export default function ContactPage() {
     <>
       {/* ── § 1: Hero ────────────────────────────────────────────────────────── */}
       <section
-        className="flex items-end pb-12 pt-40"
+        className="flex items-end pt-16 pb-20"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <RevealText
@@ -26,7 +26,7 @@ export default function ContactPage() {
 
       {/* ── § 2: Form + Info ─────────────────────────────────────────────────── */}
       <section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-24"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-24 md:py-32"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <ContactForm />

@@ -80,13 +80,10 @@ export default function Navbar() {
         ref={navRef}
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-          scrolled && 'border-b border-[var(--color-border)]'
-        )}
-        style={
           scrolled
-            ? { background: 'rgba(5,5,7,0.85)', backdropFilter: 'blur(20px)' }
-            : { background: 'transparent' }
-        }
+            ? 'border-b border-[var(--color-border)] bg-void/80 backdrop-blur-md'
+            : 'bg-transparent'
+        )}
       >
         <nav
           className="flex items-center justify-between h-16 md:h-20"

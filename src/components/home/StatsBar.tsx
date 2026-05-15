@@ -48,8 +48,8 @@ export default function StatsBar() {
   return (
     <section
       ref={ref}
-      className="border-y border-[var(--color-border)]"
-      style={{ paddingInline: 'var(--section-pad-x)', paddingBlock: '3rem' }}
+      className="border-y border-[var(--color-border)] py-20 md:py-24"
+      style={{ paddingInline: 'var(--section-pad-x)' }}
       aria-label="Portfolio statistics"
     >
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-0 md:divide-x md:divide-[var(--color-border)]">

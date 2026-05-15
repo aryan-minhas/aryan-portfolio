@@ -38,7 +38,7 @@ export default function LeadershipHero() {
     <>
       {/* Academic Timeline */}
       <section
-        className="py-20 border-t border-[var(--color-border)]"
+        className="py-24 md:py-32 border-t border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-12">
@@ -84,7 +84,7 @@ export default function LeadershipHero() {
 
       {/* Leadership Highlights */}
       <section
-        className="py-20 border-t border-[var(--color-border)]"
+        className="py-24 md:py-32 border-t border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-12">
@@ -95,7 +95,7 @@ export default function LeadershipHero() {
           {LEADERSHIP.map(({ label, value }) => (
             <div
               key={label}
-              className="p-6"
+              className="p-8"
               style={{ background: 'var(--glass-bg)', border: '1px solid var(--color-border)' }}
             >
               <p className="font-mono text-[10px] text-amber tracking-[0.3em] uppercase mb-4">

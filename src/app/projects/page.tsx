@@ -15,7 +15,7 @@ export default function ProjectsPage() {
     <>
       {/* ── § 1: Page Hero ───────────────────────────────────────────────────── */}
       <section
-        className="flex items-end pb-16 pt-40"
+        className="flex items-end pt-16 pb-20"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <RevealText

@@ -27,7 +27,7 @@ export default function PageWrapper({
           y: -16,
           transition: { duration: 0.35, ease: EASE_CINEMATIC },
         }}
-        className="relative"
+        className="relative pt-28 md:pt-32"
       >
         {/* ── Cinematic wipe overlay — sweeps right-to-left, revealing the page ── */}
         <motion.div

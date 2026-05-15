@@ -11,7 +11,7 @@ const TECH = ['Java', 'JavaFX', 'PostgreSQL', 'pgvector', 'LangChain4j', 'Ollama
 export default function AVALStartupSection() {
   return (
     <section
-      className="py-20 border-t border-[var(--color-border)]"
+      className="py-24 md:py-32 border-t border-[var(--color-border)]"
       style={{ paddingInline: 'var(--section-pad-x)' }}
     >
       <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-12">

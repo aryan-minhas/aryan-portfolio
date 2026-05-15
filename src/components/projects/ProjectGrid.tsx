@@ -53,7 +53,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
       </div>
 
       {/* Card grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-32">
         <AnimatePresence mode="popLayout">
           {filtered.map((project, i) => (
             <ProjectCard key={project.slug} project={project} index={i} />
