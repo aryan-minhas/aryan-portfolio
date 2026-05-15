@@ -4,7 +4,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const CYAN_HEX = '#00E5FF';
+const BRASS = '#c2a649';
 
 // ── Particle Field ───────────────────────────────────────────────────────────
 function ParticleField({ count }: { count: number }) {
@@ -45,10 +45,10 @@ function ParticleField({ count }: { count: number }) {
   return (
     <points ref={pointsRef} geometry={geometry}>
       <pointsMaterial
-        color={CYAN_HEX}
-        size={0.018}
+        color={BRASS}
+        size={0.015}
         transparent
-        opacity={0.55}
+        opacity={0.7}
         sizeAttenuation
         depthWrite={false}
       />
@@ -58,27 +58,26 @@ function ParticleField({ count }: { count: number }) {
 
 // ── Wireframe Sphere ─────────────────────────────────────────────────────────
 function WireframeSphere() {
-  const lineRef = useRef<THREE.LineSegments>(null);
-
-  const edgesGeo = useMemo(
-    () => new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(2.8, 1)),
-    []
-  );
+  const meshRef = useRef<THREE.Mesh>(null);
 
   useFrame((_, delta) => {
-    if (!lineRef.current) return;
-    lineRef.current.rotation.y += delta * 0.08;
-    lineRef.current.rotation.z += delta * 0.04;
+    if (!meshRef.current) return;
+    meshRef.current.rotation.y += delta * 0.08;
+    meshRef.current.rotation.z += delta * 0.04;
   });
 
   return (
-    <lineSegments ref={lineRef} geometry={edgesGeo}>
-      <lineBasicMaterial
-        color={CYAN_HEX}
+    <mesh ref={meshRef}>
+      <icosahedronGeometry args={[2.8, 1]} />
+      <meshStandardMaterial
+        color={BRASS}
+        emissive={BRASS}
+        emissiveIntensity={0.6}
+        wireframe
         transparent
-        opacity={0.07}
+        opacity={0.15}
       />
-    </lineSegments>
+    </mesh>
   );
 }
 
@@ -100,8 +99,10 @@ export default function HeroScene() {
       gl={{ antialias: false, alpha: true }}
       style={{ background: 'transparent' }}
     >
-      <ambientLight intensity={0.25} />
-      <pointLight position={[10, 10, 10]} color={CYAN_HEX} intensity={0.5} />
+      <ambientLight intensity={0.5} color={BRASS} />
+      <pointLight position={[10, 10, 10]} intensity={3.0} color={BRASS} />
+      <pointLight position={[-10, -10, -5]} intensity={1.2} color="#5a6b70" />
+      <pointLight position={[0, 0, -15]} intensity={0.8} color="#4a5d4e" />
       <ParticleField count={particleCount} />
       <WireframeSphere />
     </Canvas>
