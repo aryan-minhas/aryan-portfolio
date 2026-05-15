@@ -29,14 +29,14 @@ export default function PageWrapper({
         }}
         className="relative pt-28 md:pt-32"
       >
-        {/* ── Cinematic wipe overlay — sweeps right-to-left, revealing the page ── */}
+        {/* ── Vertical curtain wipe — rises upward, revealing the page ── */}
         <motion.div
-          initial={{ scaleX: 1 }}
+          initial={{ scaleY: 1 }}
           animate={{
-            scaleX: 0,
-            transition: { duration: 0.65, ease: EASE_WIPE, delay: 0.05 },
+            scaleY: 0,
+            transition: { duration: 0.75, ease: EASE_WIPE, delay: 0.05 },
           }}
-          className="fixed inset-0 pointer-events-none z-[9998] origin-right"
+          className="fixed inset-0 pointer-events-none z-[9998] origin-top"
           style={{ backgroundColor: 'var(--color-cyan)' }}
           aria-hidden="true"
         />

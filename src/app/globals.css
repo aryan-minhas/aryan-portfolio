@@ -187,3 +187,10 @@ body::before {
 /* ── Glow utilities ── */
 .glow-cyan  { box-shadow: var(--glow-cyan); }
 .glow-amber { box-shadow: var(--glow-amber); }
+
+/* ── GPU compositing for animated elements ── */
+.gsap-animated, .framer-animated, [data-animate] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

@@ -49,18 +49,18 @@ export default function ScrollReveal({
       : [el];
 
     const fromMap: Record<RevealVariant, gsap.TweenVars> = {
-      'slide-up':   { y: 40, opacity: 0 },
+      'slide-up':   { clipPath: 'inset(100% 0% 0% 0%)', opacity: 1 },
       'slide-left': { x: -60, opacity: 0 },
       'clip-up':    { clipPath: 'inset(100% 0% 0% 0%)', opacity: 1 },
-      'fade-in':    { opacity: 0 },
+      'fade-in':    { clipPath: 'inset(100% 0% 0% 0%)', opacity: 1 },
       'count-up':   { opacity: 0 },
     };
 
     const toMap: Record<RevealVariant, gsap.TweenVars> = {
-      'slide-up':   { y: 0, opacity: 1 },
+      'slide-up':   { clipPath: 'inset(0% 0% 0% 0%)' },
       'slide-left': { x: 0, opacity: 1 },
       'clip-up':    { clipPath: 'inset(0% 0% 0% 0%)' },
-      'fade-in':    { opacity: 1 },
+      'fade-in':    { clipPath: 'inset(0% 0% 0% 0%)' },
       'count-up':   { opacity: 1 },
     };
 

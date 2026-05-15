@@ -50,18 +50,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       initial={{ opacity: 0, y: 32 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -16, scale: 0.97 }}
+      whileHover={{ scale: 1.02 }}
       transition={{
         duration:  0.45,
         delay:     Math.min(index * 0.06, 0.3),
         ease:      [0.16, 1, 0.3, 1],
+        scale:     { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
       }}
     >
       <Link
         href={`/projects/${project.slug}`}
-        className="group flex flex-col h-full"
+        className="group flex flex-col h-full border border-[var(--color-border)] hover:border-[var(--color-border-hover)] transition-[border-color] duration-300"
         style={{
           background:  ACCENT_BG[accent],
-          border:      '1px solid var(--color-border)',
           borderTop:   `2px solid ${ACCENT_BORDER[accent]}`,
           padding:     '2rem',
         }}
