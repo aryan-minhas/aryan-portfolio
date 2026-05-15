@@ -15,13 +15,17 @@ export default function SmoothScrollProvider({
     initGSAP();
 
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.1,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      wheelMultiplier: 1.2,
+      touchMultiplier: 2.0,
+      syncTouch: false,
+      infinite: false,
     });
 
     function onRaf(time: number) {
-      lenis.raf(time);
+      lenis.raf(time * 1000);
       ScrollTrigger.update();
     }
 
