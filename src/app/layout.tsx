@@ -5,7 +5,8 @@ import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 import Navbar      from "@/components/layout/Navbar";
 import PageWrapper from "@/components/layout/PageWrapper";
 import Footer      from "@/components/layout/Footer";
-import CustomCursor from "@/components/ui/CustomCursor";
+import CustomCursor    from "@/components/ui/CustomCursor";
+import LoadingScreen   from "@/components/ui/LoadingScreen";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -85,6 +86,7 @@ export default function RootLayout({
       className={`${bebas.variable} ${syne.variable} ${dmMono.variable} ${interTight.variable}`}
     >
       <body>
+        <LoadingScreen />
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>

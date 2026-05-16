@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { personal, education } from '@/lib/data';
 
 const GLANCE = [
@@ -42,16 +43,27 @@ export default function AboutHero() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-24 md:py-32 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
-        <div>
-          <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-8">
-            BACKGROUND
-          </p>
-          <p
-            className="font-heading font-medium text-ink leading-[1.8]"
-            style={{ fontSize: 'clamp(1.05rem, 2vw, 1.3rem)' }}
-          >
-            {personal.bio}
-          </p>
+        <div className="flex flex-col sm:flex-row gap-8 items-start">
+          <div className="w-full sm:w-48 shrink-0">
+            <Image
+              src="/images/profile.jpg"
+              alt="Aryan Ali Khan"
+              width={480}
+              height={640}
+              className="w-full aspect-[3/4] object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-700 rounded-sm border border-[#c2a649]/20"
+            />
+          </div>
+          <div>
+            <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-8">
+              BACKGROUND
+            </p>
+            <p
+              className="font-heading font-medium text-ink leading-[1.8]"
+              style={{ fontSize: 'clamp(1.05rem, 2vw, 1.3rem)' }}
+            >
+              {personal.bio}
+            </p>
+          </div>
         </div>
         <div>
           <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-6">
