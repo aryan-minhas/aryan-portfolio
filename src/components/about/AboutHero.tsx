@@ -17,8 +17,8 @@ export default function AboutHero() {
     <>
       {/* ── § 1: Hero ─────────────────────────────────────────────────── */}
       <section
-        className="flex flex-col md:flex-row items-end gap-12 pt-32 md:pt-40 pb-20 border-b border-[var(--color-border)]"
-        style={{ paddingInline: 'var(--section-pad-x)', minHeight: '60vh' }}
+        className="flex flex-col md:flex-row items-center gap-12 pt-32 md:pt-40 pb-20 border-b border-[var(--color-border)]"
+        style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <div className="flex-1">
           <p className="font-mono text-xs text-cyan tracking-[0.3em] uppercase mb-6">
@@ -44,7 +44,7 @@ export default function AboutHero() {
             alt="Aryan Ali Khan"
             width={480}
             height={640}
-            className="w-full aspect-[3/4] object-cover grayscale-[20%] opacity-90 rounded-md"
+            className="w-full aspect-[3/4] object-cover grayscale-[50%] opacity-90 hover:grayscale-0 transition-all duration-700 rounded-md"
           />
         </div>
       </section>
