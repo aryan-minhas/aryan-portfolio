@@ -25,7 +25,7 @@ export default function HeroSection() {
       document.documentElement.style.overflow = 'hidden';
 
       gsap.set('.hero-scene',   { autoAlpha: 0 });
-      gsap.set('.hero-name',    { autoAlpha: 0, scale: 0.95 });
+      gsap.set('.hero-name',    { autoAlpha: 0, y: 30 });
       gsap.set(
         ['.hero-eyebrow', '.hero-subtitle', '.hero-ctas', '.hero-scroll'],
         { autoAlpha: 0, y: 20 }
@@ -43,7 +43,7 @@ export default function HeroSection() {
         // ── Condensed revisit (≈1.2s) ────────────────────────────────────────
         tl.to('.boot-overlay',  { autoAlpha: 0, duration: 0.5, ease: 'power2.inOut' }, 0)
           .to('.hero-scene',    { autoAlpha: 1, duration: 0.8, ease: 'power2.inOut' }, 0)
-          .to('.hero-name',     { autoAlpha: 1, scale: 1, duration: 0.8, ease: 'power2.out' }, 0.2)
+          .to('.hero-name',     { autoAlpha: 1, y: 0, duration: 1.5, ease: 'power3.out' }, 0.2)
           .to('.hero-eyebrow',  { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.4)
           .to('.hero-subtitle', { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }, 0.55)
           .to(['.hero-ctas', '.hero-scroll'], { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.1 }, 0.65);
@@ -55,7 +55,7 @@ export default function HeroSection() {
           // Overlay dissolves as the globe materialises
           .to('.boot-overlay',  { autoAlpha: 0, duration: 1.8, ease: 'power2.inOut' }, 0.5)
           // Name emerges — slow scale + fade
-          .to('.hero-name',     { autoAlpha: 1, scale: 1, duration: 2.5, ease: 'power2.inOut' }, 1.0)
+          .to('.hero-name',     { autoAlpha: 1, y: 0, duration: 1.5, ease: 'power3.out' }, 1.0)
           // Supporting text settles in unhurriedly
           .to('.hero-eyebrow',  { autoAlpha: 1, y: 0, duration: 1.2, ease: 'power2.out' }, 2.2)
           .to('.hero-subtitle', { autoAlpha: 1, y: 0, duration: 1.0, ease: 'power2.out' }, 2.5)
@@ -120,7 +120,7 @@ export default function HeroSection() {
           </span>
         </h1>
 
-        <p className="hero-subtitle font-body text-ink-muted mt-8 max-w-xl mx-auto leading-relaxed text-base md:text-lg">
+        <p className="hero-subtitle font-body text-ink-muted mt-8 max-w-xl mx-auto leading-relaxed text-base md:text-lg text-center">
           I build systems that don&apos;t break.{' '}
           <span className="text-ink">And some that do — on purpose.</span>
         </p>
