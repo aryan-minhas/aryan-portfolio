@@ -47,7 +47,7 @@ export default function AboutHero() {
             BACKGROUND
           </p>
           <p
-            className="font-heading font-medium text-ink leading-relaxed"
+            className="font-heading font-medium text-ink leading-[1.8]"
             style={{ fontSize: 'clamp(1.05rem, 2vw, 1.3rem)' }}
           >
             {personal.bio}

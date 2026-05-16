@@ -190,6 +190,16 @@ body::before {
 .glow-cyan  { box-shadow: var(--glow-cyan); }
 .glow-amber { box-shadow: var(--glow-amber); }
 
+/* ── Global typography breathing room ── */
+p, .body-text {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.025em;
+}
+
 /* ── GPU compositing for animated elements ── */
 .gsap-animated, .framer-animated, [data-animate] {
   will-change: transform, opacity;
