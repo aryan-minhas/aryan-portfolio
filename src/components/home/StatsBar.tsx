@@ -29,7 +29,7 @@ export default function StatsBar() {
 
         gsap.to(proxy, {
           val: value,
-          duration: 1.6,
+          duration: 1.5,
           ease: 'power2.out',
           scrollTrigger: { trigger: ref.current, start: 'top 88%', once: true },
           onUpdate() {
@@ -65,7 +65,7 @@ export default function StatsBar() {
                 textShadow: 'var(--glow-amber)',
               }}
             >
-              {value.toString().padStart(2, '0') + suffix}
+              {'00' + suffix}
             </span>
             <span className="font-mono text-[10px] tracking-[0.35em] text-ink-muted uppercase">
               {label}
