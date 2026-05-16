@@ -15,7 +15,7 @@ export default function ProjectsPage() {
     <>
       {/* ── § 1: Page Hero ───────────────────────────────────────────────────── */}
       <section
-        className="pt-24 md:pt-28 pb-20"
+        className="pt-8 pb-20"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <RevealText

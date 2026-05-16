@@ -17,7 +17,7 @@ export default function AboutHero() {
     <>
       {/* ── § 1: Hero ─────────────────────────────────────────────────── */}
       <section
-        className="flex flex-col md:flex-row items-center gap-12 pt-32 md:pt-40 pb-20 border-b border-[var(--color-border)]"
+        className="flex flex-col md:flex-row items-center gap-12 pt-8 pb-20 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <div className="flex-1">
