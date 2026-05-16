@@ -27,7 +27,7 @@ export default function PageWrapper({
           y: -16,
           transition: { duration: 0.35, ease: EASE_CINEMATIC },
         }}
-        className="relative pt-28 md:pt-32"
+        className="relative pt-28 md:pt-32 flex-1 flex flex-col"
       >
         {/* ── Vertical curtain wipe — rises upward, revealing the page ── */}
         <motion.div

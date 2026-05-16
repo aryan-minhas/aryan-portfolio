@@ -85,7 +85,7 @@ export default function RootLayout({
       lang="en"
       className={`${bebas.variable} ${syne.variable} ${dmMono.variable} ${interTight.variable}`}
     >
-      <body>
+      <body className="min-h-screen flex flex-col">
         <LoadingScreen />
         <a href="#main-content" className="skip-to-content">
           Skip to content
@@ -94,7 +94,7 @@ export default function RootLayout({
           <CustomCursor />
           <Navbar />
           <PageWrapper>
-            <main id="main-content">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <Footer />
           </PageWrapper>
         </SmoothScrollProvider>

@@ -13,7 +13,7 @@ export default function ContactPage() {
     <>
       {/* ── § 1: Hero ────────────────────────────────────────────────────────── */}
       <section
-        className="flex items-end pt-32 pb-20"
+        className="flex items-end pt-[150px] pb-20"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
         <RevealText
