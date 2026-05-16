@@ -28,7 +28,7 @@ const TIMELINE = [
 ] as const;
 
 const LEADERSHIP = [
-  { label: 'CO-FOUNDER',   value: 'AVAL R&D — AI financial reconciliation startup, 2024–Present' },
+  { label: 'CO-FOUNDER',   value: 'AVAL R&D — AI financial reconciliation startup, 2026–Present' },
   { label: 'INITIATIVE',   value: 'Self-directed engineering of commercial-grade software during full-time academics' },
   { label: 'MENTALITY',    value: 'Ship production-quality code, not student code. Every project is a portfolio artefact.' },
 ] as const;

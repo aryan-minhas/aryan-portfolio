@@ -63,7 +63,7 @@ export default function CourseworkTimeline() {
               {bySem[sem].map((course) => (
                 <li key={course.name} className="flex items-start gap-2">
                   <span
-                    className="shrink-0 rounded-full mt-1.5"
+                    className="shrink-0 rounded-full mt-[7px]"
                     style={{
                       width:      '5px',
                       height:     '5px',
