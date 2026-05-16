@@ -79,9 +79,6 @@ export default function Footer() {
         <p className="font-mono text-[10px] text-ink-faint tracking-[0.2em]">
           &copy; {year} ARYAN ALI KHAN. ALL RIGHTS RESERVED.
         </p>
-        <p className="font-mono text-[10px] text-ink-faint tracking-[0.2em]">
-          BUILT WITH NEXT.JS &middot; GSAP &middot; THREE.JS
-        </p>
       </div>
     </footer>
   );

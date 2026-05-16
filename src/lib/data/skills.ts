@@ -29,7 +29,7 @@ export const education: Education = {
   institution: 'FAST National University of Computer & Emerging Sciences',
   degree:      'Bachelor of Science in Computer Science',
   period:      'Sep 2024 – May 2028',
-  cgpa:        '3.79',
+  cgpa:        '3.03',
   currentYear: 'Year 2 (Semester 4)',
   coursework: [
     { name: 'Programming Fundamentals',               semester: 1, category: 'core' },

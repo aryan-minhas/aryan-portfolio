@@ -38,7 +38,7 @@ export default function AVALStartupSection() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <span className="font-mono text-[10px] text-cyan tracking-[0.3em] uppercase">
-                2024 – PRESENT
+                2026 – PRESENT
               </span>
               <span className="font-mono text-[9px] text-cyan tracking-[0.2em] uppercase px-2 py-0.5 border border-cyan/40">
                 ACTIVE
