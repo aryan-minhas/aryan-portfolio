@@ -17,25 +17,36 @@ export default function AboutHero() {
     <>
       {/* ── § 1: Hero ─────────────────────────────────────────────────── */}
       <section
-        className="flex flex-col justify-end pt-16 pb-20 border-b border-[var(--color-border)]"
+        className="flex flex-col md:flex-row items-end gap-12 pt-32 md:pt-40 pb-20 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)', minHeight: '60vh' }}
       >
-        <p className="font-mono text-xs text-cyan tracking-[0.3em] uppercase mb-6">
-          WHO I AM
-        </p>
-        <h1
-          className="font-display leading-none tracking-widest text-ink mb-6"
-          style={{ fontSize: 'clamp(4rem, 12vw, 11rem)' }}
-        >
-          {first.toUpperCase()}
-          <br />
-          <span style={{ color: 'var(--color-cyan)', textShadow: 'var(--glow-cyan)' }}>
-            {rest.join(' ').toUpperCase()}
-          </span>
-        </h1>
-        <p className="font-heading text-lg font-medium text-ink-muted">
-          {personal.title}
-        </p>
+        <div className="flex-1">
+          <p className="font-mono text-xs text-cyan tracking-[0.3em] uppercase mb-6">
+            WHO I AM
+          </p>
+          <h1
+            className="font-display leading-none tracking-widest text-ink mb-6"
+            style={{ fontSize: 'clamp(4rem, 12vw, 11rem)' }}
+          >
+            {first.toUpperCase()}
+            <br />
+            <span style={{ color: 'var(--color-cyan)', textShadow: 'var(--glow-cyan)' }}>
+              {rest.join(' ').toUpperCase()}
+            </span>
+          </h1>
+          <p className="font-heading text-lg font-medium text-ink-muted">
+            {personal.title}
+          </p>
+        </div>
+        <div className="shrink-0 w-48 md:w-64 border-4 border-[var(--color-cyan)] rounded-none overflow-hidden">
+          <Image
+            src="/images/profile.jpg"
+            alt="Aryan Ali Khan"
+            width={480}
+            height={640}
+            className="w-full aspect-[3/4] object-cover grayscale-[20%] opacity-90 rounded-md"
+          />
+        </div>
       </section>
 
       {/* ── § 2: Bio + At-a-Glance ──────────────────────────────────────── */}
@@ -43,27 +54,16 @@ export default function AboutHero() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-24 md:py-32 border-b border-[var(--color-border)]"
         style={{ paddingInline: 'var(--section-pad-x)' }}
       >
-        <div className="flex flex-col sm:flex-row gap-8 items-start">
-          <div className="w-full sm:w-48 shrink-0">
-            <Image
-              src="/images/profile.jpg"
-              alt="Aryan Ali Khan"
-              width={480}
-              height={640}
-              className="w-full aspect-[3/4] object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-700 rounded-sm border border-[#c2a649]/20"
-            />
-          </div>
-          <div>
-            <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-8">
-              BACKGROUND
-            </p>
-            <p
-              className="font-heading font-medium text-ink leading-[1.8]"
-              style={{ fontSize: 'clamp(1.05rem, 2vw, 1.3rem)' }}
-            >
-              {personal.bio}
-            </p>
-          </div>
+        <div>
+          <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-8">
+            BACKGROUND
+          </p>
+          <p
+            className="font-heading font-medium text-ink leading-[1.8]"
+            style={{ fontSize: 'clamp(1.05rem, 2vw, 1.3rem)' }}
+          >
+            {personal.bio}
+          </p>
         </div>
         <div>
           <p className="font-mono text-xs text-ink-faint tracking-[0.3em] uppercase mb-6">
